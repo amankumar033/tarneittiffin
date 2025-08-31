@@ -1,0 +1,24 @@
+{
+  "name": "tiffin-orders-dashboard",
+  "version": "0.0.0",
+  "description": "Tiffin Orders Dashboard plugin",
+  "strapi": {
+    "name": "tiffin-orders-dashboard",
+    "description": "Tiffin Orders Dashboard plugin",
+    "kind": "plugin"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

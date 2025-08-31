@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tiffin_orders",
+  "info": {
+    "singularName": "tiffin-order",
+    "pluralName": "tiffin-orders",
+    "displayName": "tiffin_order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone_number": {
+      "type": "biginteger"
+    },
+    "address": {
+      "type": "string"
+    },
+    "meal_type": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "additional_note": {
+      "type": "string"
+    }
+  }
+}
