@@ -14,9 +14,8 @@ export default () => ({
   upload: {
     config: {
       provider: 'local',
-      providerOptions: {
-        sizeLimit: 10485760, // 10MB in bytes
-      },
+      providerOptions: {},
+      sizeLimit: 10485760, // 10MB in bytes
       breakpoints: {
         xlarge: 1920,
         large: 1000,
