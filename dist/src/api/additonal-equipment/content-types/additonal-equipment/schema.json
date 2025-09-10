@@ -1,0 +1,40 @@
+{
+    "kind": "collectionType",
+    "collectionName": "additonal_equipments",
+    "info": {
+        "singularName": "additonal-equipment",
+        "pluralName": "additonal-equipments",
+        "displayName": "additonal_equipment"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "additional_equipment_id": {
+            "type": "uid"
+        },
+        "image": {
+            "type": "media",
+            "multiple": true,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "price": {
+            "type": "decimal"
+        },
+        "orders": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::order.order",
+            "mappedBy": "additonal_equipments"
+        }
+    }
+}
