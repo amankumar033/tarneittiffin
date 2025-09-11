@@ -10,5 +10,16 @@
         "draftAndPublish": true
     },
     "pluginOptions": {},
-    "attributes": {}
+    "attributes": {
+        "web_logo": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        }
+    }
 }

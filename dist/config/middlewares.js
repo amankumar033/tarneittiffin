@@ -16,6 +16,7 @@ exports.default = [
                         'blob:',
                         'market-assets.strapi.io',
                         'res.cloudinary.com',
+                        'admin.tarneittiffin.com',
                     ],
                     'media-src': [
                         "'self'",
@@ -23,6 +24,7 @@ exports.default = [
                         'blob:',
                         'market-assets.strapi.io',
                         'res.cloudinary.com',
+                        'admin.tarneittiffin.com',
                     ],
                     upgradeInsecureRequests: null,
                 },
@@ -36,11 +38,13 @@ exports.default = [
             headers: '*',
             origin: [
                 'http://localhost:3000',
+                'http://localhost:3010',
                 'http://localhost:3001',
                 'http://127.0.0.1:3000',
                 'http://127.0.0.1:3001',
                 'https://tarneittiffin.com',
-                'https://www.tarneittiffin.com'
+                'https://www.tarneittiffin.com',
+                'https://tarneittiffin.com:3010'
             ]
         }
     },
