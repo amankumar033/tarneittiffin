@@ -796,6 +796,43 @@ export interface ApiTiffinTiffin extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiUsersPlanUsersPlan extends Struct.CollectionTypeSchema {
+  collectionName: 'users_plans';
+  info: {
+    displayName: 'users_plan';
+    pluralName: 'users-plans';
+    singularName: 'users-plan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    additional_queries: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    duration: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
+    full_name: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::users-plan.users-plan'
+    > &
+      Schema.Attribute.Private;
+    phone_number: Schema.Attribute.BigInteger;
+    plan: Schema.Attribute.String;
+    plan_status: Schema.Attribute.Enumeration<
+      ['UNREAD', 'READ', 'ACCEPTED', 'REJECTED']
+    >;
+    price: Schema.Attribute.BigInteger;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1317,6 +1354,7 @@ declare module '@strapi/strapi' {
       'api::order.order': ApiOrderOrder;
       'api::tiffin-order.tiffin-order': ApiTiffinOrderTiffinOrder;
       'api::tiffin.tiffin': ApiTiffinTiffin;
+      'api::users-plan.users-plan': ApiUsersPlanUsersPlan;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

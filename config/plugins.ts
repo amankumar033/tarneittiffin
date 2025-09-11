@@ -11,6 +11,10 @@ export default () => ({
     enabled: true,
     resolve: './src/plugins/enquiry-dashboard'
   },
+  'users-plans-dashboard': {
+    enabled: true,
+    resolve: './src/plugins/users-plans-dashboard'
+  },
   upload: {
     config: {
       provider: 'local',

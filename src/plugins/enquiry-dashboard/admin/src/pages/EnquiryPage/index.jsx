@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 `;
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  color: #32324d;
+  color: white;
   margin-bottom: 2rem;
   font-weight: 600;
 `;

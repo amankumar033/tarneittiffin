@@ -8,7 +8,7 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #32324d;
+  color: white;
 `;
 
 const Table = styled.table`
@@ -295,7 +295,7 @@ const OrdersPage = () => {
 
   return (
     <Container>
-      <Title>Orders Dashboard</Title>
+      <Title >Orders Dashboard</Title>
       
       {orders.length > 0 ? (
         <ScrollContainer>
@@ -424,9 +424,7 @@ const OrdersPage = () => {
               <DetailValue>
                 <strong>Order ID:</strong> {selectedOrder.id}
               </DetailValue>
-              <DetailValue>
-                <strong>Document ID:</strong> {selectedOrder.documentId || 'N/A'}
-              </DetailValue>
+             
               <DetailValue>
                 <strong>Total Cost:</strong> {selectedOrder.total_cost ? `$${selectedOrder.total_cost}` : 'N/A'}
               </DetailValue>

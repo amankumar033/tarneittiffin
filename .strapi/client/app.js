@@ -7,6 +7,7 @@ import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import ordersDashboard from "../../src/plugins/orders-dashboard/strapi-admin";
 import tiffinOrdersDashboard from "../../src/plugins/tiffin-orders-dashboard/strapi-admin";
 import enquiryDashboard from "../../src/plugins/enquiry-dashboard/strapi-admin";
+import usersPlansDashboard from "../../src/plugins/users-plans-dashboard/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
 renderAdmin(document.getElementById("strapi"), {
@@ -16,5 +17,6 @@ renderAdmin(document.getElementById("strapi"), {
     "orders-dashboard": ordersDashboard,
     "tiffin-orders-dashboard": tiffinOrdersDashboard,
     "enquiry-dashboard": enquiryDashboard,
+    "users-plans-dashboard": usersPlansDashboard,
   },
 });

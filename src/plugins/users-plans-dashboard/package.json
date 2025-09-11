@@ -1,0 +1,12 @@
+{
+  "name": "users-plans-dashboard",
+  "version": "1.0.0",
+  "description": "Users Plans dashboard plugin",
+  "strapi": {
+    "name": "users-plans-dashboard",
+    "displayName": "Users Plans",
+    "kind": "plugin"
+  },
+  "dependencies": {}
+}
+
