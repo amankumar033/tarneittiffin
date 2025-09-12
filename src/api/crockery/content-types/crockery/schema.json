@@ -32,6 +32,9 @@
     },
     "stock": {
       "type": "biginteger"
+    },
+    "qauntity": {
+      "type": "string"
     }
   }
 }
