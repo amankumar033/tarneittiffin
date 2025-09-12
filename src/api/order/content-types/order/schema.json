@@ -32,9 +32,6 @@
     "phone_number": {
       "type": "biginteger"
     },
-    "order_details": {
-      "type": "json"
-    },
     "food_item": {
       "type": "relation",
       "relation": "oneToOne",
