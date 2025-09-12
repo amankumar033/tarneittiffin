@@ -697,25 +697,17 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    additonal_equipments: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::additonal-equipment.additonal-equipment'
-    >;
     address: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    crockery: Schema.Attribute.Relation<'oneToOne', 'api::crockery.crockery'>;
     date_time: Schema.Attribute.DateTime;
     email: Schema.Attribute.Email;
-    food_item: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::food-item.food-item'
-    >;
     full_name: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'> &
       Schema.Attribute.Private;
+    order_details: Schema.Attribute.JSON;
     order_status: Schema.Attribute.Enumeration<
       ['SCHEDULED', 'DELIVERED', 'CANCELLED']
     >;

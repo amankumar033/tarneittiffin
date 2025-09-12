@@ -17,12 +17,7 @@
     "total_cost": {
       "type": "decimal"
     },
-    "additonal_equipments": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::additonal-equipment.additonal-equipment",
-      "inversedBy": "orders"
-    },
+  
     "full_name": {
       "type": "string"
     },
@@ -32,16 +27,11 @@
     "phone_number": {
       "type": "biginteger"
     },
-    "food_item": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::food-item.food-item"
+    "order_details": {
+      "type": "json"
     },
-    "crockery": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::crockery.crockery"
-    },
+  
+  
     "date_time": {
       "type": "datetime"
     },
