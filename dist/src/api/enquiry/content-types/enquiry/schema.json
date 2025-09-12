@@ -25,6 +25,14 @@
         },
         "message": {
             "type": "string"
+        },
+        "enquiry_status": {
+            "type": "enumeration",
+            "enum": [
+                "ANSWERED",
+                "UNANSWERED",
+                "READ"
+            ]
         }
     }
 }

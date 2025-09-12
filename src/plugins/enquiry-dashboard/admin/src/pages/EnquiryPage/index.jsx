@@ -238,6 +238,7 @@ const EnquiryPage = () => {
             <Th>Phone Number</Th>
             <Th>Service Interest</Th>
             <Th>Message</Th>
+            <Th>Enquiry Status</Th>
             <Th>Created At</Th>
             <Th>Actions</Th>
           </tr>
@@ -259,6 +260,7 @@ const EnquiryPage = () => {
                     : 'N/A'
                   }
                 </Td>
+                <Td>{enquiryData.enquiry_status || 'N/A'}</Td>
                 <Td>
                   {enquiryData.createdAt 
                     ? new Date(enquiryData.createdAt).toLocaleDateString()

@@ -8,7 +8,7 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #32324d;
+  color: white;
 `;
 
 const Table = styled.table`
@@ -285,6 +285,7 @@ const TiffinOrdersPage = () => {
                  <Th>Phone Number</Th>
                  <Th>Address</Th>
                  <Th>Meal Type</Th>
+                 <Th>Order Status</Th>
                  <Th>Scheduled Date/Time</Th>
                  <Th>Additional Notes</Th>
                  <Th>Actions</Th>
@@ -299,6 +300,7 @@ const TiffinOrdersPage = () => {
                    <Td>{formatPhoneNumber(order.phone_number)}</Td>
                    <Td>{order.address || 'N/A'}</Td>
                    <Td>{order.meal_type || 'N/A'}</Td>
+                   <Td>{order.order_status || '-'}</Td>
                    <Td>
                      {order.date 
                        ? new Date(order.date).toLocaleString()

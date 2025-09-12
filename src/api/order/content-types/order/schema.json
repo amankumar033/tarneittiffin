@@ -23,11 +23,6 @@
       "target": "api::additonal-equipment.additonal-equipment",
       "inversedBy": "orders"
     },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
-    },
     "full_name": {
       "type": "string"
     },
@@ -52,6 +47,14 @@
     },
     "date_time": {
       "type": "datetime"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "SCHEDULED",
+        "DELIVERED",
+        "CANCELLED"
+      ]
     }
   }
 }

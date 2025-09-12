@@ -31,6 +31,14 @@
     },
     "additional_note": {
       "type": "string"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "SCHEDULED",
+        "DELIVERED",
+        "CANCELLED"
+      ]
     }
   }
 }

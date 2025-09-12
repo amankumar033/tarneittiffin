@@ -602,6 +602,9 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
+    enquiry_status: Schema.Attribute.Enumeration<
+      ['ANSWERED', 'UNANSWERED', 'READ']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -714,16 +717,15 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::order.order'> &
       Schema.Attribute.Private;
     order_details: Schema.Attribute.JSON;
+    order_status: Schema.Attribute.Enumeration<
+      ['SCHEDULED', 'DELIVERED', 'CANCELLED']
+    >;
     phone_number: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     total_cost: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    users_permissions_user: Schema.Attribute.Relation<
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
   };
 }
 
@@ -753,6 +755,9 @@ export interface ApiTiffinOrderTiffinOrder extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     meal_type: Schema.Attribute.String;
+    order_status: Schema.Attribute.Enumeration<
+      ['SCHEDULED', 'DELIVERED', 'CANCELLED']
+    >;
     phone_number: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

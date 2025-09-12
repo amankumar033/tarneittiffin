@@ -308,6 +308,7 @@ const OrdersPage = () => {
                <Th>Phone Number</Th>
                <Th>Address</Th>
                <Th>Total Cost</Th>
+               <Th>Order Status</Th>
                <Th>Order Details</Th>
                <Th>Created At</Th>
                <Th>Updated At</Th>
@@ -323,6 +324,7 @@ const OrdersPage = () => {
                <Td>{formatPhoneNumber(order.phone_number)}</Td>
                <Td>{order.address || 'N/A'}</Td>
                <Td>{order.total_cost ? `$${order.total_cost}` : 'N/A'}</Td>
+               <Td>{order.order_status || '-'}</Td>
                <Td>
                  {order.order_details && Array.isArray(order.order_details) ? (
                    <div>
