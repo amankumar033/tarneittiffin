@@ -471,7 +471,6 @@ export interface ApiAdditonalEquipmentAdditonalEquipment
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    orders: Schema.Attribute.Relation<'manyToMany', 'api::order.order'>;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -603,7 +602,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
     enquiry_status: Schema.Attribute.Enumeration<
-      ['ANSWERED', 'UNANSWERED', 'READ']
+      ['READ', 'UNREAD', 'ANSWERED']
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -747,7 +746,7 @@ export interface ApiTiffinOrderTiffinOrder extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     meal_type: Schema.Attribute.String;
     order_status: Schema.Attribute.Enumeration<
-      ['SCHEDULED', 'DELIVERED', 'CANCELLED']
+      ['SCHEDULED', 'DELIVERED', 'ARRIVED', 'CANCELLED']
     >;
     phone_number: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;

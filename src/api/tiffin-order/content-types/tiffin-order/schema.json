@@ -37,6 +37,7 @@
       "enum": [
         "SCHEDULED",
         "DELIVERED",
+        "ARRIVED",
         "CANCELLED"
       ]
     }

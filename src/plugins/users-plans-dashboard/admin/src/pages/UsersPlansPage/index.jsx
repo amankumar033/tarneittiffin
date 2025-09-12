@@ -143,10 +143,9 @@ const UsersPlansPage = () => {
               <Th>Plan</Th>
               <Th>Duration</Th>
               <Th>Price</Th>
-              <Th>Plan Status</Th>
               <Th>Additional Queries</Th>
               <Th>Status</Th>
-              <Th>Actions</Th>
+
             </tr>
           </thead>
           <tbody>
@@ -159,12 +158,9 @@ const UsersPlansPage = () => {
                 <Td>{plan.plan || plan.attributes?.plan || 'N/A'}</Td>
                 <Td>{plan.duration || plan.attributes?.duration || 'N/A'}</Td>
                 <Td>{plan.price || plan.attributes?.price || 'N/A'}</Td>
-                <Td>{plan.plan_status || plan.attributes?.plan_status || 'N/A'}</Td>
                 <Td>{plan.additional_queries || plan.attributes?.additional_queries || 'N/A'}</Td>
                 <Td>{plan.plan_status || plan.attributes?.plan_status || 'N/A'}</Td>
-                <Td>
-                  <DeleteButton onClick={() => handleDelete(plan.id)}>Delete</DeleteButton>
-                </Td>
+                
               </Tr>
             ))}
           </tbody>

@@ -285,7 +285,6 @@ const TiffinOrdersPage = () => {
                  <Th>Phone Number</Th>
                  <Th>Address</Th>
                  <Th>Meal Type</Th>
-                 <Th>Order Status</Th>
                  <Th>Scheduled Date/Time</Th>
                  <Th>Additional Notes</Th>
                  <Th>Actions</Th>
@@ -300,7 +299,6 @@ const TiffinOrdersPage = () => {
                    <Td>{formatPhoneNumber(order.phone_number)}</Td>
                    <Td>{order.address || 'N/A'}</Td>
                    <Td>{order.meal_type || 'N/A'}</Td>
-                   <Td>{order.order_status || '-'}</Td>
                    <Td>
                      {order.date 
                        ? new Date(order.date).toLocaleString()
@@ -316,9 +314,7 @@ const TiffinOrdersPage = () => {
                      <ViewButton onClick={() => handleOrderClick(order)}>
                        View
                      </ViewButton>
-                     <DeleteButton onClick={() => handleDeleteOrder(order.id)}>
-                       Delete
-                     </DeleteButton>
+                    
                    </Td>
                  </Tr>
                ))}

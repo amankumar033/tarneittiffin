@@ -29,9 +29,9 @@
         "enquiry_status": {
             "type": "enumeration",
             "enum": [
-                "ANSWERED",
-                "UNANSWERED",
-                "READ"
+                "READ",
+                "UNREAD",
+                "ANSWERED"
             ]
         }
     }

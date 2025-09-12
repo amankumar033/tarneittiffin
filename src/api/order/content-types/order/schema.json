@@ -17,7 +17,6 @@
     "total_cost": {
       "type": "decimal"
     },
-  
     "full_name": {
       "type": "string"
     },
@@ -30,8 +29,6 @@
     "order_details": {
       "type": "json"
     },
-  
-  
     "date_time": {
       "type": "datetime"
     },

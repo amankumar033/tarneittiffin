@@ -29,12 +29,6 @@
     },
     "price": {
       "type": "decimal"
-    },
-    "orders": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::order.order",
-      "mappedBy": "additonal_equipments"
     }
   }
 }

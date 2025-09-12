@@ -308,8 +308,7 @@ const OrdersPage = () => {
                <Th>Phone Number</Th>
                <Th>Address</Th>
                <Th>Total Cost</Th>
-               <Th>Order Status</Th>
-               <Th>Order Details</Th>
+             
                <Th>Created At</Th>
                <Th>Updated At</Th>
                <Th>Actions</Th>
@@ -324,52 +323,7 @@ const OrdersPage = () => {
                <Td>{formatPhoneNumber(order.phone_number)}</Td>
                <Td>{order.address || 'N/A'}</Td>
                <Td>{order.total_cost ? `$${order.total_cost}` : 'N/A'}</Td>
-               <Td>{order.order_status || '-'}</Td>
-               <Td>
-                 {order.order_details && Array.isArray(order.order_details) ? (
-                   <div>
-                     {(() => {
-                       const foodCount = order.order_details.filter(item => item.type === 'food').length;
-                       const equipmentCount = order.order_details.filter(item => item.type === 'equipment').length;
-                       const crockeryCount = order.order_details.filter(item => item.type === 'crockery').length;
-                       
-                       return (
-                         <>
-                           {foodCount > 0 && <div><strong>Food:</strong> {foodCount} items</div>}
-                           {equipmentCount > 0 && <div><strong>Equipment:</strong> {equipmentCount} items</div>}
-                           {crockeryCount > 0 && <div><strong>Crockery:</strong> {crockeryCount} items</div>}
-                         </>
-                       );
-                     })()}
-                   </div>
-                 ) : order.order_details && typeof order.order_details === 'object' && Array.isArray(order.order_details.data) ? (
-                   <div>
-                     {(() => {
-                       const foodCount = order.order_details.data.filter(item => item.type === 'food').length;
-                       const equipmentCount = order.order_details.data.filter(item => item.type === 'equipment').length;
-                       const crockeryCount = order.order_details.data.filter(item => item.type === 'crockery').length;
-                       
-                       return (
-                         <>
-                           {foodCount > 0 && <div><strong>Food:</strong> {foodCount} items</div>}
-                           {equipmentCount > 0 && <div><strong>Equipment:</strong> {equipmentCount} items</div>}
-                           {crockeryCount > 0 && <div><strong>Crockery:</strong> {crockeryCount} items</div>}
-                         </>
-                       );
-                     })()}
-                   </div>
-                 ) : order.order_details && typeof order.order_details === 'object' ? (
-                   <div>
-                     {order.order_details.mealType && <div><strong>Meal:</strong> {order.order_details.mealType}</div>}
-                     {order.order_details.quantity && <div><strong>Qty:</strong> {order.order_details.quantity}</div>}
-                     {order.order_details.orderType && <div><strong>Type:</strong> {order.order_details.orderType}</div>}
-                     {order.order_details.date_time && <div><strong>Date/Time:</strong> {order.order_details.date_time}</div>}
-                     {order.order_details.additionalEquipment && <div><strong>Equipment:</strong> {order.order_details.additionalEquipment}</div>}
-                   </div>
-                 ) : (
-                   formatOrderDetails(order.order_details)
-                 )}
-               </Td>
+              
                <Td>
                  {order.createdAt 
                    ? new Date(order.createdAt).toLocaleDateString()
@@ -386,9 +340,7 @@ const OrdersPage = () => {
                  <ViewButton onClick={() => handleOrderClick(order)}>
                    View
                  </ViewButton>
-                 <DeleteButton onClick={() => handleDeleteOrder(order.id)}>
-                   Delete
-                 </DeleteButton>
+                 
                </Td>
              </Tr>
            ))}
